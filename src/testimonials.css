@@ -119,27 +119,27 @@
 
 /* RESPONSIVE */
 
-@media (max-width: 768px) {
+/* TABLET + MOBILE BUTTON POSITION */
+
+@media (max-width: 1024px) {
 
   .section-testmonials {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .column-testmonials {
+    width: 100%;
   }
 
   .swiper-testmonials {
     width: 100%;
   }
 
-  .header-slide svg {
-    width: 50px;
-  }
-
-  .title-slide h4 {
-    font-size: 14px;
-  }
-
-  .swiper-testmonials .swiper-slide {
-    padding: 20px;
+  .navigation-testmonials {
+    order: 3;
+    justify-content: center;
+    margin-top: 20px;
   }
 
 }

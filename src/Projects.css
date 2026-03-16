@@ -1,5 +1,5 @@
 .scroll-container {
-  height: 300vh;
+  height: 200vh;
 }
 
 .sticky-wrapper {
@@ -16,28 +16,29 @@
   gap: 30px;
 }
 
+/* MOBILE */
 .gallery-item {
   position: relative;
-  width: 300px;
-  height: 400px;
   flex-shrink: 0;
+  width: 300px;
+  aspect-ratio: 4 / 5;
   border-radius: 12px;
   overflow: hidden;
 }
 
-/* Tablet */
+/* TABLET */
 @media (min-width: 768px) {
   .gallery-item {
-    width: 450px;
-    height: 500px;
+    width: 500px;
+    aspect-ratio: 16 / 9;
   }
 }
 
-/* Desktop */
+/* LAPTOP / DESKTOP */
 @media (min-width: 1024px) {
   .gallery-item {
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -49,6 +50,6 @@
 }
 
 .item-number {
-  font-size: 18px;
-  opacity: 0.7;
+  font-size: 16px;
+  opacity: 0.8;
 }

@@ -10,8 +10,7 @@ const projects = [
   { id: 3, title: "Glass Studio Siliguri", image: HomeAbout },
 ];
 
-const CARD_WIDTH_DESKTOP = 600;
-const CARD_WIDTH_MOBILE = 300;
+const CARD_WIDTH = 700;
 const GAP = 30;
 
 export default function Projects() {
@@ -22,16 +21,17 @@ export default function Projects() {
     offset: ["start start", "end end"],
   });
 
-  const totalDistance =
-    (projects.length - 1) * (CARD_WIDTH_DESKTOP + GAP);
+  const totalDistance = (projects.length - 1) * (CARD_WIDTH + GAP);
+
+  const scrollHeight = projects.length * 60;
 
   const x = useTransform(scrollYProgress, [0, 1], [0, -totalDistance]);
 
   return (
-    <div id="example">
+    <div id="example" className="my-24">
 
-      {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between px-6 md:px-16 lg:px-32 gap-4 mb-10">
+      {/* HEADER */}
+      <div className="flex flex-col md:flex-row md:justify-between gap-6 px-6 md:px-16 lg:px-32">
 
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug text-gray-800 red-hat-display-hfont">
           Explore Our Successfully Completed Projects
@@ -41,8 +41,12 @@ export default function Projects() {
 
       </div>
 
-      {/* Scroll Section */}
-      <div ref={containerRef} className="scroll-container">
+      {/* SCROLL SECTION */}
+      <div
+        ref={containerRef}
+        className="scroll-container"
+        style={{ height: `${scrollHeight}vh` }}
+      >
 
         <div className="sticky-wrapper">
 
@@ -54,6 +58,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   className="absolute inset-0 w-full h-full object-cover"
+                  alt={project.title}
                 />
 
                 <div className="item-content">
@@ -74,6 +79,7 @@ export default function Projects() {
         </div>
 
       </div>
+
     </div>
   );
 }

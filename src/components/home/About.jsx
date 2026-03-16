@@ -4,7 +4,7 @@ import Button from "../../ui/Button";
 
 const About = () => {
   return (
-    <section className="min-h-[calc(100vh-80px)] bg-gray-100 flex items-center">
+    <section className=" bg-gray-100 flex items-center">
 
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-10 px-6 md:px-10 my-16">
 

@@ -29,17 +29,6 @@ export default function Testimonials() {
         </div>
 
         {/* NAVIGATION */}
-        <div className="navigation-testmonials flex gap-4 justify-start lg:justify-center mt-6">
-
-          <div className="swiper-button-testmonials-prev bg-yellow-400 rounded-full px-4 py-2 cursor-pointer">
-            ←
-          </div>
-
-          <div className="swiper-button-testmonials-next bg-yellow-400 rounded-full px-4 py-2 cursor-pointer">
-            →
-          </div>
-
-        </div>
 
       </div>
 
@@ -91,6 +80,18 @@ export default function Testimonials() {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <div className="navigation-testmonials flex gap-4 justify-center mt-6">
+
+          <div className="swiper-button-testmonials-prev bg-yellow-400 rounded-full px-4 py-2 cursor-pointer">
+            ←
+          </div>
+
+          <div className="swiper-button-testmonials-next bg-yellow-400 rounded-full px-4 py-2 cursor-pointer">
+            →
+          </div>
+
+        </div>
 
       </div>
 
