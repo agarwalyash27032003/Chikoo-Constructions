@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,4 +28,11 @@
     padding: 20px;
     max-width: 400px;
     text-align: center;
+}
+
+.red-hat-display-hfont {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: bold;
 }

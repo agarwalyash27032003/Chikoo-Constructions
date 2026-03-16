@@ -1,70 +1,64 @@
-import React from 'react'
-import { IoHomeOutline } from "react-icons/io5";
-import { FaRegBuilding } from "react-icons/fa";
-import { LiaTapeSolid } from "react-icons/lia";
-import { SiRenovate } from "react-icons/si";
+import React from "react";
+import HomeServiceCard from "../../ui/HomeServiceCard";
+import Button from "../../ui/Button";
 
 const Services = () => {
   return (
-    <div className="grid grid-cols-3 border border-gray-300">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-gray-300">
 
-      {/* LEFT */}
-      <div className="p-8 border-r border-gray-300 flex flex-col justify-center">
-        <h1 className="text-2xl font-semibold">Our Services</h1>
+      {/* LEFT CONTENT */}
+      <div className="p-8 border-b md:border-b-0 md:border-r border-gray-300 flex flex-col justify-center gap-4">
 
-        <h2 className="mt-4 text-gray-600">
+        <h1 className="text-sm tracking-widest text-gray-500 font-semibold text-[#e87829]">
+          Our Services
+        </h1>
+
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug text-gray-800 red-hat-display-hfont">
           Innovative Construction Services You Can Trust.
         </h2>
 
-        <button className="mt-6 bg-black text-white px-5 py-2 rounded-full w-fit">
-          Explore
-        </button>
-      </div>
-
-      {/* MIDDLE */}
-      <div className="flex flex-col divide-y border-r border-gray-300">
-
-        <div className="px-4 py-16">
-            <FaRegBuilding size={50} />
-          <h1 className="text-xl font-semibold">Commercial</h1>
-          <p className="mt-3 text-gray-600">
-            Describe the service and how customers or clients can benefit from it.
-          </p>
-        </div>
-
-        <div className="px-4 py-16">
-            < IoHomeOutline size={50} />
-          <h1 className="text-xl font-semibold">Residential</h1>
-          <p className="mt-3 text-gray-600">
-            Describe the service and how customers or clients can benefit from it.
-          </p>
+        <div className="pt-2">
+          <Button title={"Explore More"} />
         </div>
 
       </div>
 
-      {/* RIGHT */}
+      {/* COLUMN 1 */}
+      <div className="flex flex-col divide-y border-b md:border-b-0 md:border-r border-gray-300">
+
+        <HomeServiceCard
+          title="Loft Conversions"
+          description="Unlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your home."
+          image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Loft%20conversions.jpg"
+        />
+
+        <HomeServiceCard
+          title="Rear Extensions"
+          description="Expand your living space with stylish rear extensions tailored to your needs."
+          image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Rear%20Extension.jpg"
+        />
+
+      </div>
+
+      {/* COLUMN 2 */}
       <div className="flex flex-col divide-y">
 
-        <div className="px-4 py-16">
-            <LiaTapeSolid size={50}/>
-          <h1 className="text-xl font-semibold">Infrastructure</h1>
-          <p className="mt-3 text-gray-600">
-            Describe the service and how customers or clients can benefit from it.
-          </p>
-        </div>
+        <HomeServiceCard
+          title="Garden Fencing"
+          description="Secure and define your outdoor space with high-quality, durable fencing solutions."
+          image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Garden%20fencing.jpg"
+        />
 
-        <div className="px-4 py-16">
-            <SiRenovate size={50} />
-          <h1 className="text-xl font-semibold">Renovation</h1>
-          <p className="mt-3 text-gray-600">
-            Describe the service and how customers or clients can benefit from it.
-          </p>
-        </div>
+        <HomeServiceCard
+          title="Renovations & Refurbishments"
+          description="From single-room makeovers to full property refurbishments, we deliver smart upgrades."
+          image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Renovations%20&%20Refurbishments.jpg"
+        />
 
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

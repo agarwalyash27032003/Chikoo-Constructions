@@ -4,7 +4,7 @@ import Button from "../../ui/Button";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden">
 
       {/* Background Video */}
       <video
@@ -24,19 +24,23 @@ const Hero = () => {
       <div className="relative z-10 text-white">
         <Navbar />
 
-        <div className="h-screen flex flex-col justify-center px-4 pt-24 pl-16 w-[50%] gap-8">
-          <h1 className="text-5xl font-bold">
+        <div className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-28 md:pt-32 max-w-3xl gap-6">
+
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Building Dreams, One Project at a Time
           </h1>
 
-          <h3 className="mt-4 text-lg">
-            Chikoo Constructions LTD is a London-based construction company specializing in providing highquality residential building services.
+          <h3 className="text-base md:text-lg text-gray-200">
+            Chikoo Constructions LTD is a London-based construction company
+            specializing in providing high-quality residential building services.
           </h3>
 
-          <Button title={"Get Quote!"} />
+          <div className="pt-2">
+            <Button title={"Get Quote!"} />
+          </div>
+
         </div>
       </div>
-
     </div>
   );
 };
