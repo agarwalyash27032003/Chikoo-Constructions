@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import Button from "./Button";
 
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "Services", path: "/services" },
+  { name: "Contact", path: "/contact-us" },
+];
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -11,7 +19,7 @@ const Navbar = () => {
       {/* Blur Layer */}
       <div className="absolute inset-0 backdrop-blur-xl bg-gradient-to-b from-white/60 via-white/30 to-transparent"></div>
 
-      {/* Navbar Content */}
+      {/* NAVBAR */}
       <div className="relative flex justify-between items-center px-6 md:px-10 py-3">
 
         {/* Logo */}
@@ -19,77 +27,76 @@ const Navbar = () => {
           <img
             className="h-[5rem] md:h-[7rem]"
             src="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Chikoo%20Constructions.jpeg?updatedAt=1773680845629"
-            alt="Chikoo Constructions Logo"
+            alt="logo"
           />
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 font-medium text-black">
-
-          <NavLink to="/" className="hover:text-[#e87829]">
-            Home
-          </NavLink>
-
-          <NavLink to="/about" className="hover:text-[#e87829]">
-            About Us
-          </NavLink>
-
-          <NavLink to="/projects" className="hover:text-[#e87829]">
-            Projects
-          </NavLink>
-          
-          <NavLink to="/services" className="hover:text-[#e87829]">
-            Services
-          </NavLink>
-
-          <NavLink to="/contact-us" className="hover:text-[#e87829]">
-            Contact
-          </NavLink>
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.path}
+              className="hover:text-[#e87829] transition"
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
 
         {/* Desktop Button */}
         <div className="hidden md:block">
-          <Button title={"Get Quote!"} />
+          <Button title="Get Quote!" />
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Hamburger */}
         <button
-          className="md:hidden text-black text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden flex flex-col gap-1.5"
         >
-          ☰
+          <span
+            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+              menuOpen ? "rotate-45 translate-y-2" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+              menuOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+              menuOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          />
         </button>
 
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white/90 backdrop-blur-lg px-6 py-6 space-y-4 text-black">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-500 ${
+          menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-white/90 backdrop-blur-lg px-6 py-6 space-y-5 text-black flex flex-col">
 
-          <NavLink to="/" className="hover:text-[#e87829]">
-            Home
-          </NavLink>
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.path}
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-[#e87829] transition"
+            >
+              {link.name}
+            </NavLink>
+          ))}
 
-          <NavLink to="/about" className="hover:text-[#e87829]">
-            About Us
-          </NavLink>
-
-          <NavLink to="/projects" className="hover:text-[#e87829]">
-            Projects
-          </NavLink>
-          
-          <NavLink to="/services" className="hover:text-[#e87829]">
-            Services
-          </NavLink>
-
-          <NavLink to="/contact-us" className="hover:text-[#e87829]">
-            Contact
-          </NavLink>
-
-          <Button title={"Get Quote!"} />
+          <Button title="Get Quote!" />
 
         </div>
-      )}
+      </div>
+
     </nav>
   );
 };
