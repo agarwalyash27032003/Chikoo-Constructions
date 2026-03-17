@@ -59,7 +59,7 @@ const Footer = () => {
 
           <p className="mb-8">Looking for a quote?</p>
 
-          <Button title={"Get Quote!"} />
+          {/* <Button title={"Get Quote!"} /> */}
 
           <p className="mt-10 underline">
             Become a subcontractor

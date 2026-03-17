@@ -20,7 +20,7 @@ export default function GalleryWithCarousel() {
         delay: 3000,
         disableOnInteraction: false,
       }}
-      className="w-full h-[60vh] md:h-[70vh]"
+      className="w-full"
     >
       {images.map((img, i) => (
         <SwiperSlide key={i} className="h-full">

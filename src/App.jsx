@@ -4,8 +4,9 @@ import Navbar from "./ui/Navbar";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Services from "./pages/Services";
 // import Projects from "./pages/Projects";
-// import Contact from "./pages/Contact";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -14,8 +15,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
         {/* <Route path="/projects" element={<Projects />} /> */}
-        {/* <Route path="/contact-us" element={<Contact />} /> */}
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
     </ div>
   );

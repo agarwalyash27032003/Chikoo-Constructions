@@ -25,12 +25,21 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 font-medium text-black">
+
+          <NavLink to="/" className="hover:text-[#e87829]">
+            Home
+          </NavLink>
+
           <NavLink to="/about" className="hover:text-[#e87829]">
             About Us
           </NavLink>
 
           <NavLink to="/projects" className="hover:text-[#e87829]">
             Projects
+          </NavLink>
+          
+          <NavLink to="/services" className="hover:text-[#e87829]">
+            Services
           </NavLink>
 
           <NavLink to="/contact-us" className="hover:text-[#e87829]">
@@ -57,27 +66,23 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-white/90 backdrop-blur-lg px-6 py-6 space-y-4 text-black">
 
-          <NavLink
-            to="/about"
-            className="block hover:text-[#e87829]"
-            onClick={() => setMenuOpen(false)}
-          >
+          <NavLink to="/" className="hover:text-[#e87829]">
+            Home
+          </NavLink>
+
+          <NavLink to="/about" className="hover:text-[#e87829]">
             About Us
           </NavLink>
 
-          <NavLink
-            to="/projects"
-            className="block hover:text-[#e87829]"
-            onClick={() => setMenuOpen(false)}
-          >
+          <NavLink to="/projects" className="hover:text-[#e87829]">
             Projects
           </NavLink>
+          
+          <NavLink to="/services" className="hover:text-[#e87829]">
+            Services
+          </NavLink>
 
-          <NavLink
-            to="/contact-us"
-            className="block hover:text-[#e87829]"
-            onClick={() => setMenuOpen(false)}
-          >
+          <NavLink to="/contact-us" className="hover:text-[#e87829]">
             Contact
           </NavLink>
 

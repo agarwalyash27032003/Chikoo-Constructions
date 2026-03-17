@@ -39,7 +39,7 @@ export default function ProcessTimeline() {
 
       </div>
 
-      <div className="relative max-w-4xl mx-auto mt-20">
+      <div className="relative max-w-4xl mx-auto mt-20 px-[3rem] md:px-[2rem] lg:px-0">
 
         {/* Vertical Line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-[3px] h-full bg-[#8f2269]/40"></div>

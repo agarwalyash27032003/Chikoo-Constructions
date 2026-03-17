@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const HomeServiceCard = ({ title, description = "", image }) => {
+const HomeServiceCard = ({ title, description, image }) => {
   const [open, setOpen] = useState(false);
 
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import '../../index.css'
 
 const Team = () => {
   const members = [
@@ -19,12 +20,12 @@ const Team = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gray-100 flex flex-col justify-center px-8 py-12">
+    <section className=" bg-gray-100 flex flex-col justify-center px-8 py-12">
 
       {/* Heading */}
       <div className="text-center mb-12">
-        <p className="text-pink-500 text-sm font-semibold uppercase">
-          Who Made It
+        <p className="red-hat-display-hfont text-[#e87829]">
+          WHO MADE IT
         </p>
         <h2 className="text-4xl font-bold text-indigo-900">
           Meet The Team
