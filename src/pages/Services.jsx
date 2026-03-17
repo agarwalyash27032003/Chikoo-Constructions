@@ -7,11 +7,11 @@ const Services = () => {
     return (
         <>
             <Navbar />
-            <div className='pt-48 flex flex-col justify-center items-center'>
-                <h1 className='text-5xl text-[#e87829] red-hat-display-hfont'>What we can do for you!</h1>
+            <div className='pt-36 flex flex-col justify-center items-center text-center w-[80%] mx-auto'>
+                <h1 className='text-5xl text-[#e87829] red-hat-display-hfont mb-4'>What we can do for you!</h1>
                 <p className='text-xl'>Quality services crafted carefully just for your convenience.</p>
             </div>
-            <div className='mx-[5rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-[5rem] gap-[2rem]'>
+            <div className='mx-[1rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-[5rem] gap-[2rem]'>
                 <HomeServiceCard
                     title="Loft Conversions"
                     description="Unlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your home."
