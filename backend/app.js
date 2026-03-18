@@ -2,11 +2,18 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 const dbUrl = process.env.MONGO_URL;
 
 app.use(express.json());
+
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://chikoo-constructions-frontend.onrender.com/"
+}));
 
 // DB connection
 mongoose.connect(dbUrl)
@@ -31,6 +38,6 @@ app.post("/api/contact", async (req, res) => {
 });
 
 // Server
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log("Server is listening on port 8080");
 });
