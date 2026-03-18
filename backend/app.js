@@ -42,5 +42,5 @@ app.post("/api/contact", async (req, res) => {
 
 // Server
 app.listen(PORT, () => {
-  console.log("Server is listening on port 8080");
+  console.log(`Server running on ${PORT}`);
 });
