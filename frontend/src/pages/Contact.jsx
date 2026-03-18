@@ -23,7 +23,7 @@ const Contact = () => {
         };
 
         try {
-            const res = await fetch("https://chikoo-constructions-backend.onrender.com/api/contact", {
+            const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

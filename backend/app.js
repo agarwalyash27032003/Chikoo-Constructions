@@ -12,7 +12,8 @@ app.use(express.json());
 const cors = require("cors");
 
 app.use(cors({
-  origin: "https://chikoo-constructions-frontend.onrender.com/"
+  origin: "https://chikoo-constructions-frontend.onrender.com",
+  methods: ["GET", "POST"],
 }));
 
 // DB connection
