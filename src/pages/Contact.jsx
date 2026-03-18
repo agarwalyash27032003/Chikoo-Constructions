@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
         <Navbar />
-        <div className='flex flex-col justify-center mx-auto items-center text-center'>
+        <div className='flex flex-col justify-center pt-8 mx-auto items-center text-center'>
             <h1 className='text-5xl pt-36 red-hat-display-hfont text-[#e87829]'>We'd Love to Hear from You</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[80%] mx-auto gap-16 justify-center items-center my-16'>
                 <div>

@@ -5,12 +5,13 @@ import Projects from '../components/home/Projects'
 import Services from '../components/home/Services'
 import Testimonial from '../components/home/Testimonial'
 import Footer from '../ui/Footer'
+import Navbar from '../ui/Navbar'
 
 
 const Home = () => {
   return (
     <div>
-        
+        <Navbar />
         <Hero />
         <About />
         <Projects />

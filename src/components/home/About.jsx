@@ -1,6 +1,7 @@
 import React from "react";
 import HomeAbout from "../../assets/HomeAbout.jpg";
 import Button from "../../ui/Button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -32,8 +33,9 @@ const About = () => {
               garden spaces — we take pride in turning houses into homes. Every
               project we take on is built with transparency, care, and craftsmanship.
             </p>
-
-            <Button title={"Read More"} />
+            <Link to="/about">
+              <Button title={"Read More"} />
+            </Link>
           </div>
 
           {/* Stats */}

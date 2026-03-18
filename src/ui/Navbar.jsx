@@ -14,10 +14,10 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-20">
+    <nav className="fixed w-full z-20">
 
       {/* Blur Layer */}
-      <div className="absolute inset-0 backdrop-blur-xl bg-gradient-to-b from-white/60 via-white/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-[#FAF9F6]"></div>
 
       {/* NAVBAR */}
       <div className="relative flex justify-between items-center px-6 md:px-10 py-3">
@@ -25,8 +25,8 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/">
           <img
-            className="h-[5rem] md:h-[7rem]"
-            src="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Chikoo%20Constructions.jpeg?updatedAt=1773680845629"
+            className="h-[4rem] md:h-[5rem]"
+            src="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Logo%20without%20BG.png"
             alt="logo"
           />
         </Link>

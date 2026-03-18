@@ -1,6 +1,7 @@
 import React from "react";
 import HomeServiceCard from "../../ui/HomeServiceCard";
 import Button from "../../ui/Button";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -17,7 +18,9 @@ const Services = () => {
           Innovative Construction Services You Can Trust.
         </h2>
 
-        <Button title={"Explore More"} />
+        <Link to="/services">
+          <Button title={"Explore More"} />
+        </Link>
 
       </div>
 
