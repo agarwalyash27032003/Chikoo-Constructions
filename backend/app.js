@@ -27,13 +27,15 @@ const contactForm = require("./models/contactform");
 // POST route
 app.post("/api/contact", async (req, res) => {
   try {
-    const data = req.body;
+    console.log("Incoming data:", req.body); // 👈 ADD THIS
 
-    await contactForm.create(data);
+    const saved = await contactForm.create(req.body);
+
+    console.log("Saved:", saved); // 👈 ADD THIS
 
     res.status(200).json({ success: true });
   } catch (err) {
-    console.error(err);
+    console.error("ERROR:", err); // 👈 VERY IMPORTANT
     res.status(500).json({ success: false });
   }
 });
