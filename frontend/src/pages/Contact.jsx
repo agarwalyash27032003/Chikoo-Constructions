@@ -4,6 +4,7 @@ import Footer from '../ui/Footer'
 import { RiHomeOfficeLine } from "react-icons/ri";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { GrContactInfo } from "react-icons/gr";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Contact = () => {
 
@@ -23,7 +24,7 @@ const Contact = () => {
         };
 
         try {
-            const res = await fetch("https://chikoo-constructions-backend.onrender.com/api/contact", {
+            const res = await fetch(`${BASE_URL}/api/contact`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
