@@ -7,7 +7,7 @@ import { GrContactInfo } from "react-icons/gr";
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Contact = () => {
-
+console.log("BASE_URL:", import.meta.env.VITE_BACKEND_URL);
     // ✅ STATE
     const [name, setName] = useState("");
     const [contactNo, setContactNo] = useState("");
