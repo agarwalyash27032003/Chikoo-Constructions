@@ -1,47 +1,32 @@
 require("dotenv").config();
 
+const cors = require("cors");
 const express = require("express");
-const mongoose = require("mongoose");
-const PORT = process.env.PORT || 8080;
 
 const app = express();
-const dbUrl = process.env.MONGO_URL;
+const PORT = process.env.PORT || 8080;
+const mongoose = require("mongoose");
 
+// ✅ MUST BE FIRST
+app.use(cors());
+
+// ✅ IMPORTANT
 app.use(express.json());
 
-const cors = require("cors");
+// ✅ TEST ROUTE (add this)
+app.get("/", (req, res) => {
+  res.send("Backend running ✅");
+});
 
-app.use(cors({
-  origin: "https://chikoo-constructions-frontend.onrender.com",
-  methods: ["GET", "POST"],
-}));
 
-// DB connection
-mongoose.connect(dbUrl)
+mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
-// Model
-const contactForm = require("./models/contactform");
+// ROUTE
+const contactFormRoute = require("./routes/contactForm.routes");
+app.use("/api/contact", contactFormRoute);
 
-// POST route
-app.post("/api/contact", async (req, res) => {
-  try {
-    console.log("🔥 HIT API");
-    console.log("📦 BODY:", req.body);
-
-    const saved = await contactForm.create(req.body);
-
-    console.log("✅ SAVED:", saved);
-
-    res.status(200).json({ success: true });
-  } catch (err) {
-    console.error("❌ ERROR:", err);
-    res.status(500).json({ success: false, error: err.message });
-  }
-});
-
-// Server
 app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
