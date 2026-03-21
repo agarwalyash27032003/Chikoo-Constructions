@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,40 +29,94 @@ const Footer = () => {
           </div>
 
           {/* NAV */}
+
           <div>
             <ul className="space-y-4 md:space-y-6 text-sm md:text-base">
-              <li className="text-orange-500">HOME</li>
-              <li>SERVICES</li>
-              <li>PROJECTS</li>
-              <li>ABOUT US</li>
-              <li>CONTACT US</li>
+
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "text-orange-500" : "text-gray-800"
+                  }
+                >
+                  HOME
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive ? "text-orange-500" : "text-gray-800"
+                  }
+                >
+                  ABOUT US
+                </NavLink>
+              </li>
+
+
+              <li>
+                <NavLink
+                  to="/projects"
+                  className={({ isActive }) =>
+                    isActive ? "text-orange-500" : "text-gray-800"
+                  }
+                >
+                  PROJECTS
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive ? "text-orange-500" : "text-gray-800"
+                  }
+                >
+                  SERVICES
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  to="/contact-us"
+                  className={({ isActive }) =>
+                    isActive ? "text-orange-500" : "text-gray-800"
+                  }
+                >
+                  CONTACT
+                </NavLink>
+              </li>
+
             </ul>
           </div>
 
           {/* HEAD OFFICE */}
           <div>
-            <h4 className="font-semibold mb-4 md:mb-8 tracking-wider">
+            <h4 className="font-semibold mb-4 md:mb-8 tracking-wider text-orange-500">
               HEAD OFFICE
             </h4>
 
-            <p className="text-sm leading-6">
-              500 Terry Francine St,<br />
-              San Francisco, CA 94158
+            <p className="text-sm leading-6 jakarta-sans">
+              18 Holden Avenue, NW9 8HR,<br />
+              London, United Kingdom
             </p>
 
-            <div className="mt-4 md:mt-10 text-sm">
-              <p>123-456-7890</p>
-              <p>info@mysite.com</p>
+            <div className="mt-4 md:mt-10 text-sm jakarta-sans">
+              <p>M Sharif: +44 7766 079007</p>
+              <p>Vidhi Pansari: +44 7766 079008</p>
+              <p>chikooconstructions@gmail.com</p>
             </div>
           </div>
 
           {/* SOCIALS */}
           <div>
-            <h4 className="font-semibold mb-4 md:mb-8 tracking-wider">
+            <h4 className="font-semibold mb-4 md:mb-8 tracking-wider text-orange-500">
               SOCIALS
             </h4>
 
-            <ul className="space-y-3 md:space-y-6 underline text-sm">
+            <ul className="space-y-3 md:space-y-6 underline text-sm jakarta-sans">
               <li>Facebook</li>
               <li>Instagram</li>
               <li>LinkedIn</li>
@@ -70,15 +125,15 @@ const Footer = () => {
 
           {/* INQUIRIES */}
           <div>
-            <h4 className="font-semibold mb-4 md:mb-8 tracking-wider">
+            <h4 className="font-semibold mb-4 md:mb-8 tracking-wider text-orange-500">
               INQUIRIES
             </h4>
 
             <p className="text-sm">Looking for a quote?</p>
 
-            <p className="mt-4 md:mt-10 underline text-sm">
+            {/* <p className="mt-4 md:mt-10 underline text-sm">
               Become a subcontractor
-            </p>
+            </p> */}
           </div>
 
         </div>

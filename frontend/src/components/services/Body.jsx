@@ -4,9 +4,9 @@ import HomeServiceCard from '../../ui/HomeServiceCard'
 const Body = () => {
     return (
         <div>
-            <div className='pt-36 flex flex-col justify-center items-center text-center w-[80%] mx-auto'>
+            <div className='pt-36 flex flex-col justify-center items-center text-center w-[80%] mx-auto mt-[2rem]'>
                 <h1 className='text-5xl text-[#e87829] red-hat-display-hfont mb-4'>What we can do for you!</h1>
-                <p className='text-xl'>Quality services crafted carefully just for your convenience.</p>
+                <p className='text-xl jakarta-sans'>Comprehensive solutions designed to enhance, protect, and transform your property with unmatched craftsmanship.</p>
             </div>
             <div className='mx-[1rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-[5rem] gap-[2rem]'>
                 <HomeServiceCard
@@ -28,19 +28,19 @@ const Body = () => {
                 />
 
                 <HomeServiceCard
-                    title="Roof Cleaning"
-                    description="Protect your home and extend your roof’s lifespan with expert moss removal, power washing, and eco-friendly roof treatments."
+                    title="Roof cleaning, repairing and replacement"
+                    description="Comprehensive roofing services including deep cleaning, expert repairs, and full replacements to keep your home protected and looking its best."
                     image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Roof%20cleaning.png?updatedAt=1773682262655"
                 />
 
                 <HomeServiceCard
-                    title="Garden Fencing"
-                    description="Secure and define your outdoor space with high-quality, durable fencing solutions available in a variety of styles."
+                    title="Chimney Removals"
+                    description="Safe and efficient chimney removal services, ensuring structural integrity while giving your property a cleaner, modern look."
                     image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Garden%20fencing.jpg"
                 />
 
                 <HomeServiceCard
-                    title="Garden Houses"
+                    title="One Bedroom Garden Houses"
                     description="Transform your garden with custom-built houses ideal for work, leisure, or guests — fully insulated and designed to your specifications"
                     image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Garden%20houses.jpeg?updatedAt=1773682254954"
                 />
@@ -62,6 +62,12 @@ const Body = () => {
                     title="Renovations & Refurbishments"
                     description="From single-room upgrades to full property refurbishments, we deliver smart, stylish transformations."
                     image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Renovations%20&%20Refurbishments.jpg"
+                />
+                
+                <HomeServiceCard
+                    title="K Rendering with Insulation"
+                    description="Enhance your property’s appearance and energy efficiency with our high-quality K rendering combined with advanced insulation solutions."
+                    image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/KRendering.jpg"
                 />
             </div>
         </div>

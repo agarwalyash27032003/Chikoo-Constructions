@@ -67,7 +67,7 @@ export default function ProcessTimeline() {
                   {step.title}
                 </h3>
 
-                <p className="text-white/90 leading-relaxed">
+                <p className="text-white/90 leading-relaxed jakarta-sans">
                   {step.text}
                 </p>
               </div>

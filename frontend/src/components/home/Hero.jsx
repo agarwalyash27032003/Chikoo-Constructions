@@ -30,7 +30,7 @@ const Hero = () => {
             Building Dreams, One Project at a Time
           </h1>
 
-          <h3 className="text-base md:text-lg text-gray-200">
+          <h3 className="text-base md:text-lg text-gray-200 jakarta-sans">
             Chikoo Constructions LTD is a London-based construction company
             specializing in providing high-quality residential building services.
           </h3>

@@ -32,7 +32,7 @@ const HomeServiceCard = ({ title, description, image }) => {
 
         {/* Description */}
         <p
-          className={`mt-3 text-sm max-w-md transition-all duration-500 ${
+          className={`mt-3 text-md max-w-md transition-all duration-500 jakarta-sans ${
             open
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0"

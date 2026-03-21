@@ -7,7 +7,6 @@ import { GrContactInfo } from "react-icons/gr";
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const Contact = () => {
-console.log("BASE_URL:", import.meta.env.VITE_BACKEND_URL);
     // ✅ STATE
     const [name, setName] = useState("");
     const [contactNo, setContactNo] = useState("");
@@ -64,20 +63,20 @@ console.log("BASE_URL:", import.meta.env.VITE_BACKEND_URL);
                             <RiHomeOfficeLine size={50} />
                             <div>
                                 <h1 className='text-2xl red-hat-display-hfont'>Office</h1>
-                                <h2>18 Holden Avenue, NW9 8HR,
+                                <h2 className='jakarta-sans'>18 Holden Avenue, NW9 8HR,
                                     London, United Kingdom</h2>
                             </div>
 
                             <MdOutlineMarkEmailRead size={50} />
                             <div>
                                 <h1 className='text-2xl red-hat-display-hfont'>Email</h1>
-                                <h2>chikooconstructions@gmail.com</h2>
+                                <h2 className='jakarta-sans'>chikooconstructions@gmail.com</h2>
                             </div>
 
                             <GrContactInfo size={50} />
                             <div>
                                 <h1 className='text-2xl red-hat-display-hfont'>Contact Number</h1>
-                                <h2>M Sharif: +44 7766 079007 <br />
+                                <h2 className='jakarta-sans'>M Sharif: +44 7766 079007 <br />
                                     Vidhi Pansari: +44 7766 079008</h2>
                             </div>
 
@@ -85,9 +84,9 @@ console.log("BASE_URL:", import.meta.env.VITE_BACKEND_URL);
 
                         <div className='flex flex-col justify-center items-center'>
                             <h1 className='text-3xl red-hat-display-hfont text-[#8f2269]'>Office Hours</h1>
-                            <h2>Monday-Friday: 09:00 - 17:00</h2>
-                            <h2>Saturday-Sunday: Closed</h2>
-                            <h2>We are closed on Bank Holidays.</h2>
+                            <h2 className='jakarta-sans'>Monday-Friday: 09:00 - 17:00</h2>
+                            <h2 className='jakarta-sans'>Saturday-Sunday: Closed</h2>
+                            <h2 className='jakarta-sans'>We are closed on Bank Holidays.</h2>
                         </div>
                     </div>
 
@@ -101,7 +100,7 @@ console.log("BASE_URL:", import.meta.env.VITE_BACKEND_URL);
                             <h1>Name</h1>
                             <input
                                 type="text"
-                                value={name}
+                                value={name} required 
                                 onChange={(e) => setName(e.target.value)}
                                 placeholder='Jane Smith'
                                 className='bg-transparent border border-white rounded-lg px-2 py-2 w-full'
@@ -112,7 +111,7 @@ console.log("BASE_URL:", import.meta.env.VITE_BACKEND_URL);
                             <h1>Contact Number</h1>
                             <input
                                 type="text"
-                                value={contactNo}
+                                value={contactNo} rel=''
                                 onChange={(e) => setContactNo(e.target.value)}
                                 placeholder='+44 9999 999999'
                                 className='bg-transparent border border-white rounded-lg px-2 py-2 w-full'
@@ -122,7 +121,7 @@ console.log("BASE_URL:", import.meta.env.VITE_BACKEND_URL);
                         <div>
                             <h1>Message</h1>
                             <textarea
-                                value={message}
+                                value={message} required
                                 onChange={(e) => setMessage(e.target.value)}
                                 placeholder='Enter Your Message'
                                 className='bg-transparent border border-white rounded-lg px-2 py-2 w-full'

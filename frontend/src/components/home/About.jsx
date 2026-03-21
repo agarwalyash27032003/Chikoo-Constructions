@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section className=" bg-gray-100 flex items-center">
 
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-10 px-6 md:px-10 my-16">
+      <div className="w-[90%] mx-auto grid lg:grid-cols-2 gap-10 px-6 md:px-10 my-16">
 
         {/* LEFT SIDE */}
         <div className="flex flex-col justify-center">
@@ -22,7 +22,7 @@ const About = () => {
               Bringing Your Vision to Life — Brick by Brick
             </h1>
 
-            <p className="mt-6 text-gray-600 leading-relaxed max-w-xl mb-6">
+             <p className="mt-6 text-gray-600 leading-relaxed max-w-xl mb-6 jakarta-sans text-lg">
               Chikoo Constructions LTD was founded with one goal: to deliver
               high-quality, trustworthy construction services with a design-first
               mindset. Based in London, our team combines architectural expertise
@@ -43,17 +43,17 @@ const About = () => {
 
             <div className="py-6 border-r border-gray-300">
               <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">48</h1>
-              <p className="text-gray-500 text-sm mt-2">In-Progress Sites</p>
+              <p className="text-gray-500 text-sm mt-2 jakarta-sans">In-Progress Sites</p>
             </div>
 
             <div className="py-6 border-r border-gray-300">
               <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">282</h1>
-              <p className="text-gray-500 text-sm mt-2">Projects Completed</p>
+              <p className="text-gray-500 text-sm mt-2 jakarta-sans">Projects Completed</p>
             </div>
 
             <div className="py-6">
               <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">35</h1>
-              <p className="text-gray-500 text-sm mt-2">Business Partners</p>
+              <p className="text-gray-500 text-sm mt-2 jakarta-sans">Business Partners</p>
             </div>
 
           </div>

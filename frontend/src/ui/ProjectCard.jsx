@@ -11,7 +11,7 @@ const ProjectCard = ({t}) => {
       transition-all duration-300 cursor-grab bg-cover bg-center h-[50vh] sm:h-[40vh]" style={{ backgroundImage: `url(${t.img})` }}
     >
 
-      <p className="text-gray-300 text-sm leading-relaxed">
+      <p className="text-gray-300 text-sm leading-relaxed jakarta-sans">
         "{t.text}"
       </p>
 

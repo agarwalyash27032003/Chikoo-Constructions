@@ -6,7 +6,33 @@ import "swiper/css/navigation";
 import "../../testimonials.css";
 
 export default function Testimonials() {
-  const testimonials = [1, 2, 3, 4, 5];
+  const testimonials = [
+  {
+    name: "Raj S.",
+    location: "Hounslow, London",
+    text: "Chikoo did a flawless job on our loft. They were on time, communicative and affordable.",
+  },
+  {
+    name: "M. Clarke",
+    location: "Walthamstow",
+    text: "Great finish on our Rear Extension. Would Use Again.",
+  },
+  {
+    name: "Seema P",
+    location: "Southall",
+    text: "Very Professional. We Love our Garen House - it's now my Home Office.",
+  },
+  {
+    name: "Jason L.",
+    location: "Beckenham",
+    text: "Fence installation was fast and neat. Quality materials too.",
+  },
+  {
+    name: "Kiran R.",
+    location: "Harrow",
+    text: "We're really pleased with the double-glazing installation. Quiet and warm now.",
+  },
+];
 
   return (
     <div className="section-testmonials my-20 px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row gap-12">
@@ -20,7 +46,7 @@ export default function Testimonials() {
             Client Feedback & Reviews
           </h1>
 
-          <h2 className="mt-4 text-gray-600 text-sm md:text-base">
+          <h2 className="mt-4 text-gray-600 text-sm md:text-base jakarta-sans">
             Discover what our satisfied clients say about our services,
             quality, professionalism, and commitment to delivering
             exceptional results.
@@ -62,8 +88,8 @@ export default function Testimonials() {
                     <div className="avatar"></div>
 
                     <div className="title-slide">
-                      <h4>Daniel Reed</h4>
-                      <h6>Brand Strategist at Atlas Studio</h6>
+                      <h4 className="red-hat-display-hfont">{item.name}</h4>
+                      <h6 className="jakarta-sans">{item.location}</h6>
                     </div>
 
                   </div>
@@ -71,9 +97,8 @@ export default function Testimonials() {
                   <div className="quote-icon">❝</div>
                 </div>
 
-                <p className="text-slide">
-                  Tasteful direction and clean delivery. Strategic,
-                  well-structured, and elevated without overcomplicating.
+                <p className="text-lg text-white text-gray-600 leading-relaxed jakarta-sans">
+                  {item.text}
                 </p>
 
               </div>

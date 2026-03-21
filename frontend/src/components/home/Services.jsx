@@ -40,9 +40,9 @@ const Services = () => {
       />
 
       <HomeServiceCard
-        title="Garden Fencing"
-        description="Secure and define your outdoor space with high-quality, durable fencing solutions available in a variety of styles."
-        image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Garden%20fencing.jpg"
+        title="Roof cleaning, repairing and replacement"
+        description="Comprehensive roofing services including deep cleaning, expert repairs, and full replacements to keep your home protected and looking its best."
+        image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Roof%20cleaning.png?updatedAt=1773682262655"
       />
 
       <HomeServiceCard

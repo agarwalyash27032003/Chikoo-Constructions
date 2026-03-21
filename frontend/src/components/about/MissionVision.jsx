@@ -13,7 +13,7 @@ const MissionVision = () => {
             Mission
           </h1>
 
-          <p className="text-sm md:text-base leading-relaxed">
+          <p className="text-sm md:text-base leading-relaxed jakarta-sans">
             To provide comprehensive design-and-build solutions that merge
             aesthetics with durability — while maintaining honesty, clear
             communication, and professionalism at every step.
@@ -28,7 +28,7 @@ const MissionVision = () => {
             Vision
           </h1>
 
-          <p className="text-sm md:text-base leading-relaxed">
+          <p className="text-sm md:text-base leading-relaxed jakarta-sans">
             To redefine residential construction in London by offering
             client-first service, architectural finesse, and dependable
             workmanship under one roof.

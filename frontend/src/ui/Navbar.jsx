@@ -14,7 +14,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-20">
+    <nav className="fixed top-[40px] w-full z-20">
 
       {/* Blur Layer */}
       <div className="absolute inset-0 bg-[#FAF9F6]"></div>
@@ -37,7 +37,11 @@ const Navbar = () => {
             <NavLink
               key={link.name}
               to={link.path}
-              className="hover:text-[#e87829] transition"
+              end={link.path === "/"}
+              className={({ isActive }) =>
+                `jakarta-sans transition ${isActive ? "text-[#e87829]" : "text-black hover:text-[#e87829]"
+                }`
+              }
             >
               {link.name}
             </NavLink>
@@ -55,19 +59,16 @@ const Navbar = () => {
           className="md:hidden flex flex-col gap-1.5"
         >
           <span
-            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
-              menuOpen ? "rotate-45 translate-y-2" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
-              menuOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
           />
         </button>
 
@@ -75,9 +76,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ${
-          menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-500 ${menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="bg-white/90 backdrop-blur-lg px-6 py-6 space-y-5 text-black flex flex-col">
 
@@ -85,8 +85,11 @@ const Navbar = () => {
             <NavLink
               key={link.name}
               to={link.path}
-              onClick={() => setMenuOpen(false)}
-              className="hover:text-[#e87829] transition"
+              end={link.path === "/"}
+              className={({ isActive }) =>
+                `jakarta-sans transition ${isActive ? "text-[#e87829]" : "text-black hover:text-[#e87829]"
+                }`
+              }
             >
               {link.name}
             </NavLink>
