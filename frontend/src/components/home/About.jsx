@@ -39,7 +39,7 @@ const About = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 mt-10 border-t border-gray-300 text-center">
+          {/* <div className="grid grid-cols-3 mt-10 border-t border-gray-300 text-center">
 
             <div className="py-6 border-r border-gray-300">
               <h1 className="text-3xl md:text-4xl font-semibold text-gray-800">48</h1>
@@ -56,7 +56,7 @@ const About = () => {
               <p className="text-gray-500 text-sm mt-2 jakarta-sans">Business Partners</p>
             </div>
 
-          </div>
+          </div> */}
 
         </div>
 

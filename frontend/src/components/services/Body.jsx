@@ -6,7 +6,7 @@ const Body = () => {
         <div>
             <div className='pt-36 flex flex-col justify-center items-center text-center w-[80%] mx-auto mt-[2rem]'>
                 <h1 className='text-5xl text-[#e87829] red-hat-display-hfont mb-4'>What we can do for you!</h1>
-                <p className='text-xl jakarta-sans'>Comprehensive solutions designed to enhance, protect, and transform your property with unmatched craftsmanship.</p>
+                <p className='text-xl jakarta-sans justify-center'>Comprehensive solutions designed to enhance, protect, and transform your property with unmatched craftsmanship.</p>
             </div>
             <div className='mx-[1rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-[5rem] gap-[2rem]'>
                 <HomeServiceCard

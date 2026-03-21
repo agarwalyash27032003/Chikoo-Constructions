@@ -50,7 +50,9 @@ const Navbar = () => {
 
         {/* Desktop Button */}
         <div className="hidden md:block">
-          <Button title="Get Quote!" />
+          <Link to="/contact-us">
+            <Button title="Get Quote!" />
+          </Link>
         </div>
 
         {/* Hamburger */}
@@ -95,7 +97,9 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          <Button title="Get Quote!" />
+          <Link to="/contact-us">
+            <Button title="Get Quote!" />
+          </Link>
 
         </div>
       </div>

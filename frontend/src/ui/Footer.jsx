@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -130,6 +131,12 @@ const Footer = () => {
             </h4>
 
             <p className="text-sm">Looking for a quote?</p>
+
+            <div className="mt-8">
+              <Link to="/contact-us">
+                <Button title="Get Quote!" />
+              </Link>
+            </div>
 
             {/* <p className="mt-4 md:mt-10 underline text-sm">
               Become a subcontractor

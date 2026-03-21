@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../ui/Navbar";
 import Button from "../../ui/Button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -22,7 +23,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-white">
-        
+
 
         <div className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-28 md:pt-32 max-w-3xl gap-6">
 
@@ -36,7 +37,9 @@ const Hero = () => {
           </h3>
 
           <div className="pt-2">
-            <Button title={"Get Quote!"} />
+            <Link to="/contact-us">
+              <Button title="Get Quote!" />
+            </Link>
           </div>
 
         </div>
