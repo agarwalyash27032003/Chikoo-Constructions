@@ -16,7 +16,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <div className="min-h-screen w-full overflow-x-hidden" style={{ overflowX: "hidden", width: "100%", isolation: "isolate" }}>
       <ScrollTop />
       {/* 🔥 GLOBAL HEADER */}
       <TopStrip />

@@ -65,7 +65,7 @@
 
   transform: scale(0.9);
   filter: blur(1px) grayscale(0.5);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
 .swiper-slide{

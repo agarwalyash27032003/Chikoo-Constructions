@@ -15,7 +15,7 @@ const Hero = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/HeroVid.mp4" type="video/mp4" />
+        <source src="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/4ac5d017-eec3-4479-b859-cd12011930fb.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}

@@ -9,7 +9,7 @@
 .testimonialSwiper .swiper-slide {
   transform: scale(0.9);
   filter: blur(2px) grayscale(0.4);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
 .jakarta-sans {
@@ -24,11 +24,9 @@
 }
 
 .glass-card {
-    /* 1. Semi-transparent background */
-    background: rgba(255, 255, 255, 0.2); 
     /* 2. The key property: backdrop blur */
-    backdrop-filter: blur(10px); /* Adjust blur value as needed */
-    -webkit-backdrop-filter: blur(10px); /* For compatibility */
+    background: rgba(255, 255, 255, 0.85);
+    /* -webkit-backdrop-filter: blur(10px); */
     
     /* 3. Additional styling for realism */
     border-radius: 16px; /* Rounded corners */
@@ -46,30 +44,27 @@
   font-style: bold;
 }
 
+/* ✅ Fix — GPU path */
 @keyframes scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }
 
 @keyframes scroll-right {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
-  }
+  from { transform: translate3d(-50%, 0, 0); }
+  to   { transform: translate3d(0, 0, 0); }
 }
 
 .animate-scroll-left {
   animation: scroll-left 35s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .animate-scroll-right {
   animation: scroll-right 35s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .testimonial-mask {
@@ -83,19 +78,72 @@
 }
 
 html, body {
-  overflow-x: hidden;
   width: 100%;
+  /* remove overflow-x: hidden */
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
+/* Fix 1: GPU-accelerate the scroll animation */
 .animate-scroll {
   animation: scroll 20s linear infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;              /* ✅ ADD THIS */
+  transform: translate3d(0, 0, 0);    /* ✅ ADD THIS */
+}
+
+/* Fix 2: Use translate3d in the keyframe so GPU handles it */
+@keyframes scroll {
+  0%   { transform: translate3d(0, 0, 0); }        /* ✅ was translateX(0) */
+  100% { transform: translate3d(-50%, 0, 0); }     /* ✅ was translateX(-50%) */
+}
+
+.carousel-track {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.video-card {
+  width: 200px;
+  height: 360px;
+  border-radius: 16px;
+  object-fit: cover;
+
+  opacity: 0.4;
+  transform: scale(0.9);
+
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.video-card.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ✅ Optimized Scrolling Animations */
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 35s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll-left {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+/* ✅ Glass Card Utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Fix for Carousel Track Performance */
+.carousel-track {
+  will-change: transform;
+  display: flex;
 }

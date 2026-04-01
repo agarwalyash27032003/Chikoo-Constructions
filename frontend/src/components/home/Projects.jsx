@@ -8,31 +8,37 @@ const projects = [
     name: "Emily Rodriguez",
     role: "Data Analyst",
     text: "The AI's ability to analyze data and provide insights is unmatched.",
-    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Roof%20cleaning.png?updatedAt=1773682262655"
+    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/IMG_1733.jpg"
   },
   {
     name: "David Park",
     role: "Startup Founder",
     text: "This saved us a lot of development time. The component works flawlessly.",
-    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Scaffolding.jpg?updatedAt=1773682257437"
+    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/6AFA8779-9929-4585.jpg"
   },
   {
     name: "Daniel Carter",
     role: "Web Designer",
     text: "One of the best testimonial components I've used.",
-    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Renovations%20&%20Refurbishments.jpg?updatedAt=1773682256272"
+    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/A738FAAA-CA8E-47F7-89A8-104BBF306BE7.JPG"
   },
   {
-    name: "Michael Chen",
-    role: "Software Developer",
-    text: "This tool saved me hours of work. The automation features are amazing.",
-    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Loft%20conversions.jpg?updatedAt=1773682257190"
+    name: "Emily Rodriguez",
+    role: "Data Analyst",
+    text: "The AI's ability to analyze data and provide insights is unmatched.",
+    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/IMG_1733.jpg"
   },
   {
-    name: "Michael Chen",
-    role: "Software Developer",
-    text: "This tool saved me hours of work. The automation features are amazing.",
-    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Loft%20conversions.jpg?updatedAt=1773682257190"
+    name: "David Park",
+    role: "Startup Founder",
+    text: "This saved us a lot of development time. The component works flawlessly.",
+    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/6AFA8779-9929-4585.jpg"
+  },
+  {
+    name: "Daniel Carter",
+    role: "Web Designer",
+    text: "One of the best testimonial components I've used.",
+    img: "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/A738FAAA-CA8E-47F7-89A8-104BBF306BE7.JPG"
   },
 ]
 

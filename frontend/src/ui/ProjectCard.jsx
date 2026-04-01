@@ -12,7 +12,7 @@ const ProjectCard = ({t}) => {
     >
 
       <p className="text-gray-300 text-sm leading-relaxed jakarta-sans">
-        "{t.text}"
+        ""
       </p>
 
     </div>
