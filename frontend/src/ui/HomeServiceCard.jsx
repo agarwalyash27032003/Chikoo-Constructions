@@ -6,9 +6,9 @@ const HomeServiceCard = ({ title, description, image }) => {
   return (
     <div
       onClick={() => setOpen(!open)}
-      className="relative group aspect-[16/9] overflow-hidden cursor-pointer bg-neutral-900 shadow-lg"
+      className="relative group aspect-[16/9] overflow-hidden cursor-pointer rounded-xl bg-neutral-900 shadow-lg touch-pan-y"
     >
-      {/* Background Image: We use contrast and blur instead of pure darkness */}
+      {/* Background Image */}
       <img
         src={image}
         alt={title}
@@ -19,21 +19,18 @@ const HomeServiceCard = ({ title, description, image }) => {
         }`}
       />
 
-      {/* Modern Gradient Overlay: 
-          When closed: bottom-heavy gradient to show title.
-          When open: subtle uniform tint. 
-      */}
+      {/* Gradient Overlay */}
       <div className={`absolute inset-0 transition-all duration-500 ${
         open 
-          ? "bg-black/30" // 👈 Lowered from 60% to 30% so you can see the image
-          : "bg-gradient-to-t from-black/80 via-transparent to-transparent"
+          ? "bg-black/30" 
+          : "bg-gradient-to-t from-black/90 via-black/20 to-transparent"
       }`}></div>
 
       {/* Content Wrapper */}
-      <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+      <div className="absolute inset-0 flex flex-col justify-end p-5 text-white pointer-events-none">
         
-        {/* Title: Uses a text-shadow to stay readable even on lighter backgrounds */}
-        <h2 className={`text-xl font-bold text-center drop-shadow-md transition-transform duration-500 ${
+        {/* Title */}
+        <h2 className={`text-lg md:text-xl font-bold text-center transition-transform duration-500 pointer-events-auto ${
           open ? "-translate-y-1" : "translate-y-0"
         }`}>
           {title}
@@ -41,22 +38,27 @@ const HomeServiceCard = ({ title, description, image }) => {
 
         {/* Scrollable Description Area */}
         <div 
-          className={`transition-all duration-500 ease-in-out overflow-hidden ${
-            open ? "max-h-[65%] opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+          className={`transition-all duration-500 ease-in-out overflow-hidden pointer-events-auto ${
+            open ? "max-h-[60%] opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"
           }`}
         >
           <div 
+            // 🛑 CRITICAL: stopPropagation prevents closing the card while scrolling
             onClick={(e) => e.stopPropagation()} 
-            className="jakarta-sans text-sm leading-relaxed overflow-y-auto pr-2 max-h-[110px] custom-card-scroll overscroll-contain text-gray-100 font-medium"
-            style={{ textShadow: "0px 1px 4px rgba(0,0,0,0.8)" }}
+            className="jakarta-sans text-sm leading-relaxed overflow-y-auto pr-2 max-h-[100px] custom-card-scroll overscroll-contain text-gray-100 font-medium"
+            style={{ 
+              textShadow: "0px 1px 4px rgba(0,0,0,0.8)",
+              WebkitOverflowScrolling: "touch", // ✅ Enable momentum scrolling for iOS
+              touchAction: "pan-y" // ✅ Explicitly allow vertical touch
+            }}
           >
             {description}
           </div>
         </div>
 
-        {/* Subtle Button Hint */}
+        {/* Close Button Hint */}
         <div className={`mt-3 text-center transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}>
-           <span className="text-[10px] py-1 px-3 border border-white/30 rounded-full uppercase tracking-tighter bg-white/10 backdrop-blur-md">
+           <span className="text-[10px] py-1 px-3 border border-white/30 rounded-full uppercase bg-white/10 backdrop-blur-md pointer-events-auto">
               Close
            </span>
         </div>

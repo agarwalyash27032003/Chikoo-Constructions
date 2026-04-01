@@ -149,20 +149,29 @@ html, body {
 }
 
 /* Styling the scrollbar inside the card so it's visible on dark backgrounds */
+/* Force Scrollbar visibility for Mobile Card */
+.custom-card-scroll {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
 .custom-card-scroll::-webkit-scrollbar {
-  width: 4px;
+  width: 5px; /* Slightly wider for easier mobile visibility */
+  display: block;
 }
 
 .custom-card-scroll::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
 
 .custom-card-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5) !important;
   border-radius: 10px;
 }
 
-.custom-card-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.6);
+/* Prevent the background page from moving when scrolling inside the card */
+.overscroll-contain {
+  overscroll-behavior: contain;
 }
