@@ -11,7 +11,7 @@ const Body = () => {
             <div className='mx-[1rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-[5rem] gap-[2rem]'>
                 <HomeServiceCard
                     title="Loft Conversions"
-                    description="Unlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your home."
+                    description="Unlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your home.nlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your homenlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your homenlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your homenlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your homenlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your homenlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your homenlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your homenlock the hidden potential of your attic with bespoke loft conversions that add space, light, and value to your home"
                     image="https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/Loft%20conversions.jpg"
                 />
 
