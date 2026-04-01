@@ -6,7 +6,7 @@ const HomeServiceCard = ({ title, description, image }) => {
   return (
     <div
       onClick={() => setOpen(!open)}
-      className="relative group aspect-[16/9] overflow-hidden cursor-pointer rounded-xl bg-neutral-900 shadow-lg touch-pan-y"
+      className="relative group aspect-[16/9] overflow-hidden cursor-pointer bg-neutral-900 shadow-lg touch-pan-y"
     >
       {/* Background Image */}
       <img
