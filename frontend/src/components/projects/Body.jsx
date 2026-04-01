@@ -31,7 +31,7 @@ export default function Body() {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  // ✅ Teleport logic
+  // Teleport logic for infinite loop
   useEffect(() => {
     if (index < baseVideos.length) {
       setIsJumping(true);
@@ -44,12 +44,12 @@ export default function Body() {
 
   useEffect(() => {
     if (isJumping) {
-      // Shortest possible delay to bypass the render cycle
       const t = setTimeout(() => setIsJumping(false), 30);
       return () => clearTimeout(t);
     }
   }, [isJumping]);
 
+  // Video Autoplay Control
   useEffect(() => {
     videoRefs.current.forEach((video, i) => {
       if (!video) return;
@@ -76,26 +76,36 @@ export default function Body() {
     <div className="w-full py-24 flex flex-col items-center justify-center relative overflow-hidden bg-white">
       
       {/* Controls */}
-      <div className="absolute w-full max-w-[1100px] flex justify-between px-6 z-20 pointer-events-none">
+      <div className="absolute w-full max-w-[800px] flex justify-between px-6 z-20 pointer-events-none">
         <button 
           onClick={prev} 
           disabled={isJumping}
-          className="pointer-events-auto bg-black/5 hover:bg-black/10 p-4 rounded-full backdrop-blur-sm transition-opacity disabled:opacity-0"
+          className="pointer-events-auto bg-black/10 hover:bg-black/20 p-4 rounded-full backdrop-blur-md transition-all active:scale-90"
         >
           ←
         </button>
         <button 
           onClick={next} 
           disabled={isJumping}
-          className="pointer-events-auto bg-black/5 hover:bg-black/10 p-4 rounded-full backdrop-blur-sm transition-opacity disabled:opacity-0"
+          className="pointer-events-auto bg-black/10 hover:bg-black/20 p-4 rounded-full backdrop-blur-md transition-all active:scale-90"
         >
           →
         </button>
       </div>
 
-      <div ref={containerRef} className="w-full max-w-[1400px] overflow-visible">
+      {/* Slider Container with Gradient Mask */}
+      <div 
+        ref={containerRef} 
+        className="w-full max-w-[1000px] overflow-visible relative"
+        style={{
+          // ✅ This creates the fade-out effect on the edges
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 25%, black 75%, transparent)",
+          maskImage: "linear-gradient(to right, transparent, black 25%, black 75%, transparent)"
+        }}
+      >
         <motion.div
-          className="flex gap-4 items-center cursor-grab active:cursor-grabbing"
+          className="flex items-center cursor-grab active:cursor-grabbing"
+          style={{ gap: `${GAP}px` }}
           drag={isJumping ? false : "x"}
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={handleDragEnd}
@@ -108,7 +118,9 @@ export default function Body() {
         >
           {videos.map((video, i) => {
             const isActive = i === index;
-            const isNear = Math.abs(i - index) <= 2;
+            // Only show the active one and the immediate neighbors
+            const isVisible = Math.abs(i - index) <= 1;
+            const isNear = Math.abs(i - index) <= 4;
 
             return (
               <div key={`${i}-${video}`} className="flex-shrink-0">
@@ -119,12 +131,13 @@ export default function Body() {
                   loop
                   playsInline
                   preload={isNear ? "auto" : "none"}
-                  className="rounded-2xl shadow-xl object-cover"
+                  className="rounded-2xl shadow-2xl object-cover bg-black"
                   style={{
                     width: `${CARD_WIDTH}px`,
                     height: "360px",
-                    opacity: isActive ? 1 : 0.4,
-                    transform: isActive ? "scale(1.1)" : "scale(0.9)",
+                    // ✅ Videos further than 1 step away become invisible
+                    opacity: isVisible ? (isActive ? 1 : 0.5) : 0,
+                    transform: isActive ? "scale(1.15)" : "scale(0.95)",
                     transition: isJumping ? "none" : "transform 0.5s ease, opacity 0.5s ease",
                     willChange: "transform"
                   }}

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#e9e9e9] text-gray-700">
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
+      <div className="max-w-8xl mx-auto px-4 md:px-6 md:px-10 py-16">
 
         {/* LOGO */}
         <div className="mb-10 md:hidden flex justify-center">
@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
 
         {/* GRID */}
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
+        <div className="grid grid-cols-2 gap-4 md:gap-10 md:grid-cols-5">
 
           {/* LOGO (desktop only) */}
           <div className="hidden md:block">
@@ -107,7 +107,12 @@ const Footer = () => {
             <div className="mt-4 md:mt-10 text-sm jakarta-sans">
               <p>M Sharif: +44 7766 079007</p>
               <p>Vidhi Pansari: +44 7766 079008</p>
-              <p>chikooconstructions@gmail.com</p>
+              <a
+                href="mailto:chikooconstructions@gmail.com"
+                className="break-words hover:underline"
+              >
+                chikooconstructions@gmail.com
+              </a>
             </div>
           </div>
 
