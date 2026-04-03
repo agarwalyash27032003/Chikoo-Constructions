@@ -4,6 +4,7 @@ import Footer from '../ui/Footer'
 import Navbar from '../ui/Navbar'
 import LocationsServed from "../components/projects/LocationsServed"
 import Hero from '../components/projects/Hero'
+import ProjectGallery from '../components/projects/ProjectGallery'
 
 const Projects = () => {
   return (
@@ -12,6 +13,7 @@ const Projects = () => {
         <Hero />
         <LocationsServed />
         <Body />
+        <ProjectGallery />
         <Footer />
     </ div>
   )
