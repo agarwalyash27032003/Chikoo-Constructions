@@ -2,9 +2,7 @@ import { useState } from "react"
 import ProjectCard from "./ProjectCard"
 
 export default function ProjectRow({ projects, direction }) {
-
   const [paused, setPaused] = useState(false)
-
   const items = [...projects, ...projects]
 
   return (
@@ -15,9 +13,8 @@ export default function ProjectRow({ projects, direction }) {
       onTouchStart={() => setPaused(true)}
       onTouchEnd={() => setPaused(false)}
     >
-
       <div
-        className={`flex gap-6 w-max ${
+        className={`flex gap-6 w-max will-change-transform ${
           direction === "left"
             ? "animate-scroll-left"
             : "animate-scroll-right"
@@ -26,13 +23,10 @@ export default function ProjectRow({ projects, direction }) {
           animationPlayState: paused ? "paused" : "running"
         }}
       >
-
         {items.map((t, i) => (
           <ProjectCard key={i} t={t} />
         ))}
-
       </div>
-
     </div>
   )
 }

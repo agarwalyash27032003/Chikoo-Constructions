@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const baseVideos = [
   "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/7A14a071-C9c9-4Fca-Aeef-B402c6d4dc02updated.mp4?updatedAt=1774980948796",
-  "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/6E36391b-C76e-49Ff-A974-33Cdb56e0f5bupdated.mp4?updatedAt=1774981424511",
-  "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/7A14a071-C9c9-4Fca-Aeef-B402c6d4dc02updated.mp4?updatedAt=1774980948796",
-  "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/6E36391b-C76e-49Ff-A974-33Cdb56e0f5bupdated.mp4?updatedAt=1774981424511",
+  "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/IMG_1758.mp4",
+  "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/IMG_1843.mp4",
+  "https://ik.imagekit.io/bluepeakstudio/Chikoo%20Constructions/IMG_1808.mp4",
 ];
 
 const videos = [...baseVideos, ...baseVideos, ...baseVideos];

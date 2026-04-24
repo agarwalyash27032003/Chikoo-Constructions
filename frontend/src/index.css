@@ -128,8 +128,16 @@ html, body {
 }
 
 @keyframes scroll-left {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 40s linear infinite;
 }
 
 /* ✅ Glass Card Utility */
@@ -174,4 +182,19 @@ html, body {
 /* Prevent the background page from moving when scrolling inside the card */
 .overscroll-contain {
   overscroll-behavior: contain;
+}
+
+@keyframes scroll {
+  0% {
+    /* translate3d triggers hardware acceleration */
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    /* Move by exactly 50% since we have two identical sets */
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
 }
